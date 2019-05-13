@@ -12,7 +12,7 @@ ENV ATOMIST_CONFIG_PATH /opt/sdm/sdm-config.json
 ENV DOCKER_BUILDER kaniko
 
 COPY --from=gcr.io/kaniko-project/executor:v0.9.0 /kaniko /kaniko
- 
+
 RUN curl -s -L -O https://github.com/Yelp/dumb-init/releases/download/v$DUMB_INIT_VERSION/dumb-init_${DUMB_INIT_VERSION}_amd64.deb     && dpkg -i dumb-init_${DUMB_INIT_VERSION}_amd64.deb     && rm -f dumb-init_${DUMB_INIT_VERSION}_amd64.deb
 
 RUN mkdir -p /app
