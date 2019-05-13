@@ -1,7 +1,7 @@
 FROM openjdk:8
 
 LABEL maintainer="Atomist <docker@atomist.com>"
-
+ 
 ENV DUMB_INIT_VERSION 1.2.2
 ENV BLUEBIRD_WARNINGS 0
 ENV NODE_ENV development
