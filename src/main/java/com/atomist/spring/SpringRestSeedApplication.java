@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringRestSeedApplication {
  
-	// test test test test test test test test test test test test test tse
+	// test test test test test test test test test test test test test tse tzst
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestSeedApplication.class, args);
 	}
