@@ -68,6 +68,7 @@ pipeline {
     post {
         always {
             echo 'Post notification...'
+            echo env
             notifyAtomist('T8G7LHAUD', currentBuild.currentResult)
         }
     }
