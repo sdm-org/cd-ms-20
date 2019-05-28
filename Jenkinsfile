@@ -29,7 +29,7 @@ pipeline {
         stage('docker build') {
             steps {
                 script {
-                    dockerImage = docker.build('atomist/cd-ms-20:${env.GIT_COMMIT}',  '-f ./Dockerfile .')
+                    dockerImage = docker.build("atomist/cd-ms-20:${env.GIT_COMMIT}",  '-f ./Dockerfile .')
                 }
             }
         }
