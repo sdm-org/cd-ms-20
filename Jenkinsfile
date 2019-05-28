@@ -9,6 +9,7 @@ def notifyAtomist(String workspaceIds, String buildStatus, String buildPhase="FI
         echo 'No Atomist workspace IDs, not sending build notification'
         return
     }
+    echo env
     def payload = JsonOutput.toJson(
         [
             name: env.JOB_NAME,
@@ -44,7 +45,6 @@ pipeline {
         stage('Notify') {
             steps {
                 echo 'Sending build start...'
-                echo env
                 notifyAtomist('T8G7LHAUD', 'STARTED', 'STARTED')
             }
         }
