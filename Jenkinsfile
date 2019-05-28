@@ -21,7 +21,7 @@ def notifyAtomist(String workspaceIds, String buildStatus, String buildPhase="FI
                 full_url: env.BUILD_URL,
                 scm: [
                     url: env.GIT_URL,
-                    branch: env.GIT_BRANCH,
+                    branch: env.GIT_LOCAL_BRANCH,
                     commit: env.GIT_COMMIT
                 ]
             ]
