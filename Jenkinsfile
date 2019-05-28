@@ -9,7 +9,7 @@ def notifyAtomist(String workspaceIds, String buildStatus, String buildPhase="FI
         echo 'No Atomist workspace IDs, not sending build notification'
         return
     }
-    echo env
+    
     def payload = JsonOutput.toJson(
         [
             name: env.JOB_NAME,
