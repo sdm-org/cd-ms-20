@@ -27,6 +27,7 @@ pipeline {
         }
 
         stage('docker build') {
+            agent any
             steps {
                 script {
                     dockerImage = docker.build("atomist/cd-ms-20:${env.GIT_COMMIT}",  '-f ./Dockerfile .')
