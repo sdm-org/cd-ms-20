@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 class SpringRestSeedController {
 
-    @GetMapping("/hello/{name}")
-    public String person(@PathVariable String name) {
-        return "Hello " + name + "!";
-    }
+	@GetMapping("/hello/{name}")
+	public String person(@PathVariable String name) {
+		return "Hello " + name + "!";
+	}
 
 }

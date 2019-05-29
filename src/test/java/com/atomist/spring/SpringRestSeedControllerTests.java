@@ -22,21 +22,18 @@ public class SpringRestSeedControllerTests {
 
 	@Test
 	public void shouldReturnGreeting() throws Exception {
-		this.mockMvc.perform(get("/hello/Rod"))
-				.andExpect(status().isOk())
+		this.mockMvc.perform(get("/hello/Rod")).andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Hello Rod!")));
 	}
 
 	@Test
 	public void shouldReturnHello() throws Exception {
-		this.mockMvc.perform(get("/"))
-				.andExpect(status().isOk());
+		this.mockMvc.perform(get("/")).andExpect(status().isOk());
 	}
 
 	@Test
 	public void shouldNotFindGreetingElsewhere() throws Exception {
-		this.mockMvc.perform(get("/hey/man"))
-				.andExpect(status().isNotFound());
+		this.mockMvc.perform(get("/hey/man")).andExpect(status().isNotFound());
 	}
 
 }
